@@ -1,0 +1,13 @@
+
+1)
+SELECT firstname, lastname, role, name  FROM wizard   JOIN player ON wizard.id = player.wizard_id   JOIN team ON team.id = player.team_id  ORDER BY name ASC;
+SELECT firstname, lastname, role, name  FROM wizard   JOIN player ON wizard.id = player.wizard_id   JOIN team ON team.id = player.team_id  ORDER BY role ASC;
+SELECT firstname, lastname, role, name  FROM wizard   JOIN player ON wizard.id = player.wizard_id   JOIN team ON team.id = player.team_id  ORDER BY lastname  ASC;
+SELECT firstname, lastname, role, name  FROM wizard   JOIN player ON wizard.id = player.wizard_id   JOIN team ON team.id = player.team_id  ORDER BY firstname ASC;
+
+2)                                                                          
+SELECT firstname, lastname    FROM wizard   JOIN player ON wizard.id = player.wizard_id  WHERE role ='seeker'  ORDER BY lastname  ASC;
+SELECT firstname, lastname    FROM wizard   JOIN player ON wizard.id = player.wizard_id  WHERE role ='seeker'  ORDER BY firstname ASC;
+
+3)
+SELECT firstname, lastname  FROM wizard   LEFT JOIN player ON wizard.id = player.wizard_id WHERE enrollment_date IS NULL;
